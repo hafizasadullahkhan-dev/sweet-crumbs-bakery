@@ -173,3 +173,35 @@ h2 {
 h1, h2, h3 {
     font-family: 'Playfair Display', serif;
 }
+
+.add-btn {
+    background: var(--pink);
+    color: white;
+    border: none;
+    border-radius: 20px;
+    padding: 8px 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.add-btn:hover {
+    background: #b02a5a;
+}
+
+#clear-btn,
+#order-btn {
+    background: white;
+    color: var(--pink);
+    border: none;
+    border-radius: 20px;
+    padding: 6px 14px;
+    margin-left: 8px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+#clear-btn:hover,
+#order-btn:hover {
+    background: #ffe3ec;
+}

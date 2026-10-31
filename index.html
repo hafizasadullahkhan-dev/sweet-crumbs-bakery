@@ -8,6 +8,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -21,20 +22,23 @@
             <a href="#about">About</a>
             <a href="#menu">Menu</a>
             <a href="#contact">Contact</a>
+            <span id="cart-count">Cart: 0</span>
+            <button id="clear-btn">Clear</button>
+            <button id="order-btn">Send Order</button>
         </nav>
     </header>
     <main>
         <section id="home">
     <div class="hero-text">
         <h2>Fresh Cakes &amp; Cupcakes</h2>
-        <p>Ghar par taaza bane hue cakes, cupcakes aur cookies.</p>
+        <p>Freshly baked cakes, cupcakes and cookies, made at home with love.</p>
         <a href="https://wa.me/923012345678">Order on WhatsApp</a>
     </div>
     <img src="images/hero.jpg" alt="Cupcake with pink frosting" class="hero-img">
 </section>
         <section id="about">
             <h2>About Us</h2>
-            <p>Sweet Crumbs ghar se chalne wali bakery hai. Hum har roz taaza cakes, cupcakes aur cookies banate hain.</p>
+            <p>Sweet Crumbs is a home bakery run with love and quality ingredients. Every day we bake fresh cakes, cupcakes and cookies for birthdays, celebrations and everyday cravings. Each order is made to order, so it always arrives fresh.</p>
         </section>
         <section id="menu">
             <h2>Our Menu</h2>
@@ -45,6 +49,7 @@
                 <h3>Chocolate Cupcake</h3>
                 <p class="price">Rs. 150</p>
                 <p>Soft chocolate cupcake with creamy frosting.</p>
+                <button class="add-btn" data-name="Chocolate Cupcake" data-price="150">Add to Cart</button>
             </article>
 
             <article class="product-card">
@@ -52,6 +57,7 @@
                 <h3>Vanilla Cake</h3>
                 <p class="price">Rs. 1800</p>
                 <p>Light vanilla sponge cake, perfect for birthdays.</p>
+                <button class="add-btn" data-name="Vanilla Cake" data-price="1800">Add to Cart</button>
             </article>
 
             <article class="product-card">
@@ -59,6 +65,7 @@
                 <h3>Chocolate Chip Cookies</h3>
                 <p class="price">Rs. 400</p>
                 <p>Crunchy outside, soft inside. Half dozen pack.</p>
+                <button class="add-btn" data-name="Chocolate Chip Cookies" data-price="400">Add to Cart</button>
             </article>
 
             <article class="product-card">
@@ -66,6 +73,7 @@
                 <h3>Fudge Brownie</h3>
                 <p class="price">Rs. 200</p>
                 <p>Rich chocolate brownie with a gooey center.</p>
+                <button class="add-btn" data-name="Fudge Brownie" data-price="200">Add to Cart</button>
             </article>
 
             <article class="product-card">
@@ -73,6 +81,7 @@
                 <h3>Glazed Donut</h3>
                 <p class="price">Rs. 120</p>
                 <p>Fluffy donut with sweet sugar glaze.</p>
+                <button class="add-btn" data-name="Glazed Donut" data-price="120">Add to Cart</button>
             </article>
 
             <article class="product-card">
@@ -80,8 +89,14 @@
                 <h3>Red Velvet Cake</h3>
                 <p class="price">Rs. 2200</p>
                 <p>Velvety red cake layered with cream cheese frosting.</p>
+                <button class="add-btn" data-name="Red Velvet Cake" data-price="2200">Add to Cart</button>
             </article>
             </div>
+        </section>
+        <section id="cart">
+            <h2>Your Cart</h2>
+            <div id="cart-items"></div>
+            <p id="cart-total"></p>
         </section>
         <section id="contact">
             <h2>Contact Us</h2>
@@ -92,8 +107,8 @@
     </main>
     <footer>
         <p>&copy; 2026 Sweet Crumbs Bakery. All rights reserved.</p>
-        <a href="https://instagram.com">Instagram</a>
-        <a href="https://facebook.com">Facebook</a>
+        <a href="https://instagram.com" target="_blank" rel="noopener">Instagram</a>
+        <a href="https://facebook.com" target="_blank" rel="noopener">Facebook</a>
     </footer>
 </body>
 </html>
