@@ -205,3 +205,40 @@ h1, h2, h3 {
 #order-btn:hover {
     background: #ffe3ec;
 }
+
+#contact a {
+    color: var(--pink);
+}
+
+.size {
+    font-size: 14px;
+    color: gray;
+}
+
+.hidden {
+    display: none;
+}
+
+.qty-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.qty-controls button {
+    background: var(--pink);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 32px;
+    height: 32px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.qty {
+    font-weight: bold;
+    min-width: 20px;
+}
