@@ -1,0 +1,58 @@
+[
+    {
+        "id": 1,
+        "name": "Chocolate Cupcake",
+        "price": 150,
+        "size": "1 piece",
+        "description": "Soft chocolate cupcake with creamy frosting.",
+        "image": "images/cupcake.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Vanilla Cake",
+        "price": 1800,
+        "size": "1 lb (500 g)",
+        "description": "Light vanilla sponge cake, perfect for birthdays.",
+        "image": "images/cake.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Chocolate Chip Cookies",
+        "price": 400,
+        "size": "6 pieces",
+        "description": "Crunchy outside, soft inside.",
+        "image": "images/cookies.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Fudge Brownie",
+        "price": 200,
+        "size": "1 piece (80 g)",
+        "description": "Rich chocolate brownie with a gooey center.",
+        "image": "images/brownie.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Glazed Donut",
+        "price": 120,
+        "size": "1 piece",
+        "description": "Fluffy donut with sweet sugar glaze.",
+        "image": "images/donut.jpg"
+    },
+        {
+        "id": 6,
+        "name": "Red Velvet Cake",
+        "price": 2200,
+        "size": "1 lb (500 g)",
+        "description": "Velvety red cake layered with cream cheese frosting.",
+        "image": "images/redvelvet.jpg"
+    },
+    {
+        "id": 7,
+        "name": "Mango Cake",
+        "price": 1500,
+        "size": "1 lb (500 g)",
+        "description": "Soft sponge cake with fresh mango and cream.",
+        "image": "images/mango.jpg"
+    }
+]

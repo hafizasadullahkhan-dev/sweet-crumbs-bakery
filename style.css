@@ -242,3 +242,8 @@ h1, h2, h3 {
     font-weight: bold;
     min-width: 20px;
 }
+
+.size {
+    font-size: 14px;
+    color: gray;
+}

@@ -1,6 +1,5 @@
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 const cartText = document.getElementById("cart-count");
-const buttons = document.querySelectorAll(".add-btn");
 const cartItems = document.getElementById("cart-items");
 const cartTotal = document.getElementById("cart-total");
 
@@ -28,30 +27,6 @@ function groupCart() {
         }
     });
     return counts;
-}
-
-function updateCards() {
-    const counts = groupCart();
-    document.querySelectorAll(".product-card").forEach(function (card) {
-        const addBtn = card.querySelector(".add-btn");
-        const controls = card.querySelector(".qty-controls");
-        const name = addBtn.dataset.name;
-
-        let qty = 0;
-        if (counts[name]) {
-            qty = counts[name].qty;
-        }
-
-        card.querySelector(".qty").textContent = qty;
-
-        if (qty > 0) {
-            addBtn.classList.add("hidden");
-            controls.classList.remove("hidden");
-        } else {
-            addBtn.classList.remove("hidden");
-            controls.classList.add("hidden");
-        }
-    });
 }
 
 function renderCart() {
@@ -88,17 +63,36 @@ function removeOne(name) {
     showCart();
 }
 
+function updateCards() {
+    const counts = groupCart();
+    document.querySelectorAll(".product-card").forEach(function (card) {
+        const addBtn = card.querySelector(".add-btn");
+        const controls = card.querySelector(".qty-controls");
+        const name = addBtn.dataset.name;
+
+        let qty = 0;
+        if (counts[name]) {
+            qty = counts[name].qty;
+        }
+
+        card.querySelector(".qty").textContent = qty;
+
+        if (qty > 0) {
+            addBtn.classList.add("hidden");
+            controls.classList.remove("hidden");
+        } else {
+            addBtn.classList.remove("hidden");
+            controls.classList.add("hidden");
+        }
+    });
+}
+
 showCart();
 
-buttons.forEach(function (button) {
-    button.addEventListener("click", function () {
-        cart.push({
-            name: button.dataset.name,
-            price: Number(button.dataset.price)
-        });
-        saveCart();
-        showCart();
-    });
+document.getElementById("clear-btn").addEventListener("click", function () {
+    cart = [];
+    saveCart();
+    showCart();
 });
 
 document.getElementById("order-btn").addEventListener("click", function () {
@@ -122,24 +116,4 @@ document.getElementById("order-btn").addEventListener("click", function () {
 
     const url = "https://wa.me/923012345678?text=" + encodeURIComponent(message);
     window.open(url, "_blank");
-});
-
-document.getElementById("clear-btn").addEventListener("click", function () {
-    cart = [];
-    saveCart();
-    showCart();
-});
-
-document.querySelectorAll(".plus-btn").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-        const addBtn = btn.closest(".product-card").querySelector(".add-btn");
-        addOne(addBtn.dataset.name, Number(addBtn.dataset.price));
-    });
-});
-
-document.querySelectorAll(".minus-btn").forEach(function (btn) {
-    btn.addEventListener("click", function () {
-        const addBtn = btn.closest(".product-card").querySelector(".add-btn");
-        removeOne(addBtn.dataset.name);
-    });
 });

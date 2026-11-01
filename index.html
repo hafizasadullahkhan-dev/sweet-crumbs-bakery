@@ -9,6 +9,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Poppins:wght@400;500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
+    <script src="menu.js" defer></script>
     <link rel="icon" href="images/logo.png">
 </head>
 <body>
@@ -22,6 +23,7 @@
             <a href="#about">About</a>
             <a href="#menu">Menu</a>
             <a href="#contact">Contact</a>
+            <a href="#cart">Cart</a>
             <span id="cart-count">Cart: 0</span>
             <button id="clear-btn">Clear</button>
             <button id="order-btn">Send Order</button>
@@ -41,94 +43,9 @@
             <p>Sweet Crumbs is a home bakery run with love and quality ingredients. Every day we bake fresh cakes, cupcakes and cookies for birthdays, celebrations and everyday cravings. Each order is made to order, so it always arrives fresh.</p>
         </section>
         <section id="menu">
-            <h2>Our Menu</h2>
-            <div class="product-grid">
-
-            <article class="product-card">
-                <img src="images/cupcake.jpg" alt="Chocolate Cupcake with frosting">
-                <h3>Chocolate Cupcake</h3>
-                <p class="price">Rs. 150</p>
-                <p class="size">1 piece</p>
-                <p>Soft chocolate cupcake with creamy frosting.</p>
-                <button class="add-btn" data-name="Chocolate Cupcake" data-price="150">Add to Cart</button>
-<div class="qty-controls hidden">
-    <button class="minus-btn">-</button>
-    <span class="qty">0</span>
-    <button class="plus-btn">+</button>
-</div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/cake.jpg" alt="Vanilla Cake with buttercream frosting">
-                <h3>Vanilla Cake</h3>
-                <p class="price">Rs. 1800</p>
-                <p class="size">1 lb (500g)</p>
-                <p>Light vanilla sponge cake, perfect for birthdays.</p>
-                <button class="add-btn" data-name="Vanilla Cake" data-price="1800">Add to Cart</button>
-                <div class="qty-controls hidden">
-    <button class="minus-btn">-</button>
-    <span class="qty">0</span>
-    <button class="plus-btn">+</button>
-</div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/cookies.jpg" alt="Chocolate Chip Cookies">
-                <h3>Chocolate Chip Cookies</h3>
-                <p class="price">Rs. 400</p>
-                <p class="size">6 pieces</p>
-                <p>Crunchy outside, soft inside. Half dozen pack.</p>
-                <button class="add-btn" data-name="Chocolate Chip Cookies" data-price="400">Add to Cart</button>
-                <div class="qty-controls hidden">
-    <button class="minus-btn">-</button>
-    <span class="qty">0</span>
-    <button class="plus-btn">+</button>
-</div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/brownie.jpg" alt="Fudge Brownie with chocolate drizzle">
-                <h3>Fudge Brownie</h3>
-                <p class="price">Rs. 200</p>
-                <p class="size">1 piece (80 g)</p>
-                <p>Rich chocolate brownie with a gooey center.</p>
-                <button class="add-btn" data-name="Fudge Brownie" data-price="200">Add to Cart</button>
-                <div class="qty-controls hidden">
-    <button class="minus-btn">-</button>
-    <span class="qty">0</span>
-    <button class="plus-btn">+</button>
-</div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/donut.jpg" alt="Glazed Donut">
-                <h3>Glazed Donut</h3>
-                <p class="price">Rs. 120</p>
-                <p class="size">1 piece</p>
-                <p>Fluffy donut with sweet sugar glaze.</p>
-                <button class="add-btn" data-name="Glazed Donut" data-price="120">Add to Cart</button>
-                <div class="qty-controls hidden">
-    <button class="minus-btn">-</button>
-    <span class="qty">0</span>
-    <button class="plus-btn">+</button>
-</div>
-            </article>
-
-            <article class="product-card">
-                <img src="images/redvelvet.jpg" alt="Red Velvet Cake with cream cheese frosting">
-                <h3>Red Velvet Cake</h3>
-                <p class="price">Rs. 2200</p>
-                <p class="size">1 lb (500g)</p>
-                <p>Velvety red cake layered with cream cheese frosting.</p>
-                <button class="add-btn" data-name="Red Velvet Cake" data-price="2200">Add to Cart</button>
-                <div class="qty-controls hidden">
-    <button class="minus-btn">-</button>
-    <span class="qty">0</span>
-    <button class="plus-btn">+</button>
-</div>
-            </article>
-            </div>
-        </section>
+    <h2>Our Menu</h2>
+    <div class="product-grid" id="menu-grid"></div>
+</section>
         <section id="cart">
             <h2>Your Cart</h2>
             <div id="cart-items"></div>
